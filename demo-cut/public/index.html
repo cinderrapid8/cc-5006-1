@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo Cut — 帧精度产品拆解剪辑</title>
+<link rel="stylesheet" href="/app.css">
+</head>
+<body>
+<header>
+  <h1>Demo Cut <span class="sub">帧精度剪辑 · 真实 FFmpeg 导出</span></h1>
+  <div class="proj-meta">
+    <select id="projectSelect"></select>
+    <button id="newProjectBtn">新建工程</button>
+    <span id="projectMeta" class="meta"></span>
+    <button id="saveBtn" class="primary">保存修订</button>
+  </div>
+</header>
+
+<main>
+  <section class="panel" id="mediaPanel">
+    <h2>1. 素材库（含帧序号 / 彩条 / 同步短音）</h2>
+    <div class="gen-form">
+      <label>帧率 <input type="number" id="genFpsNum" value="25" min="1"> /
+        <input type="number" id="genFpsDen" value="1" min="1" class="tiny"></label>
+      <label>帧数 <input type="number" id="genFrames" value="40" min="2"></label>
+      <label>短音间隔(帧) <input type="number" id="genBeep" value="10" min="2"></label>
+      <label>采样率 <select id="genSr">
+        <option value="48000">48000</option>
+        <option value="44100">44100</option>
+      </select></label>
+      <button id="genMediaBtn">生成素材</button>
+      <button id="genMixedBtn" class="ghost">一键生成混合帧率测试集</button>
+    </div>
+    <table id="mediaTable">
+      <thead><tr><th>素材</th><th>帧率(有理)</th><th>总帧数</th><th>尺寸</th><th>音频</th><th>短音</th><th></th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section class="panel">
+    <h2>2. 时间线（位置以输出帧整数编号，时长为有理数）</h2>
+    <div class="timeline-head">
+      <div id="timelineInfo" class="meta"></div>
+      <div class="legend">
+        <span class="tag cut">硬切</span>
+        <span class="tag dissolve">叠化 dissolve</span>
+        <span class="tag wipe">划像 wipe</span>
+        <span class="tag freeze">静帧</span>
+      </div>
+    </div>
+    <ol id="timeline"></ol>
+    <div id="headroomBox" class="headroom hidden"></div>
+  </section>
+
+  <section class="panel">
+    <h2>3. 片段检查器：入出点 / 静帧（引用真实解码帧）</h2>
+    <div id="inspector" class="inspector empty">选择时间线上的片段进行编辑</div>
+  </section>
+
+  <section class="panel">
+    <h2>4. 渲染与导出（任务冻结修订输入，互不覆盖）</h2>
+    <div class="render-row">
+      <button id="previewBtn">生成预览（小尺寸快速）</button>
+      <button id="renderBtn" class="primary">导出成品（全尺寸）</button>
+      <button id="cancelBtn" class="danger">取消当前任务</button>
+    </div>
+    <div id="jobState" class="job-state">空闲</div>
+    <div class="progress"><div id="progressBar"></div></div>
+
+    <h3>预览</h3>
+    <div id="previewBox" class="preview-box">尚未生成</div>
+
+    <h3>成品下载入口（仅登记成功完成的任务）</h3>
+    <table id="productsTable">
+      <thead><tr><th>任务</th><th>修订</th><th>总帧数(计划/实测)</th><th>效果清单</th><th>文件</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </section>
+</main>
+
+<dialog id="newProjectDialog">
+  <form method="dialog" id="newProjectForm">
+    <h3>新建工程</h3>
+    <label>名称 <input id="npName" value="产品拆解演示"></label>
+    <label>输出帧率 <input type="number" id="npFpsNum" value="25" min="1"> /
+      <input type="number" id="npFpsDen" value="1" min="1" class="tiny"></label>
+    <label>采样率 <select id="npSr">
+      <option value="48000">48000</option><option value="44100">44100</option>
+    </select></label>
+    <menu><button value="cancel">取消</button><button id="npConfirm" value="confirm" class="primary">创建</button></menu>
+  </form>
+</dialog>
+
+<script type="module" src="/app.js"></script>
+</body>
+</html>

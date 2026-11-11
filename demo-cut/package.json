@@ -1,0 +1,16 @@
+{
+  "name": "demo-cut",
+  "version": "1.0.0",
+  "description": "Frame-accurate product breakdown demo cutter with real FFmpeg export",
+  "type": "module",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "node test/run-tests.js",
+    "test:http": "node test/http-e2e.mjs"
+  },
+  "dependencies": {
+    "ffmpeg-static": "*",
+    "ffprobe-static": "*"
+  }
+}
