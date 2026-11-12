@@ -1,0 +1,142 @@
+{
+  "packId": "breakdown-demo",
+  "packVersion": "1.0.0",
+  "generatedBy": "kit/scripts/build-pack.js",
+  "fps": "25/1",
+  "sampleRate": 48000,
+  "sources": [
+    {
+      "id": "part01",
+      "partNo": 1,
+      "partName": "HOUSING",
+      "frames": "60",
+      "markers": [
+        "12",
+        "40"
+      ],
+      "beepEvery": "8",
+      "beepFrames": "2",
+      "media": "media/part01.mp4",
+      "subtitles": "subtitles/part01.ass"
+    },
+    {
+      "id": "part02",
+      "partNo": 2,
+      "partName": "ROTOR",
+      "frames": "60",
+      "markers": [
+        "9",
+        "34"
+      ],
+      "beepEvery": "8",
+      "beepFrames": "2",
+      "media": "media/part02.mp4",
+      "subtitles": "subtitles/part02.ass"
+    },
+    {
+      "id": "part03",
+      "partNo": 3,
+      "partName": "SHAFT",
+      "frames": "60",
+      "markers": [
+        "10",
+        "44"
+      ],
+      "beepEvery": "8",
+      "beepFrames": "2",
+      "media": "media/part03.mp4",
+      "subtitles": "subtitles/part03.ass"
+    },
+    {
+      "id": "part04",
+      "partNo": 4,
+      "partName": "COVER",
+      "frames": "60",
+      "markers": [
+        "13",
+        "45"
+      ],
+      "beepEvery": "8",
+      "beepFrames": "2",
+      "media": "media/part04.mp4",
+      "subtitles": "subtitles/part04.ass"
+    }
+  ],
+  "clips": [
+    {
+      "mediaId": "part01",
+      "inFrame": "4",
+      "outFrame": "43"
+    },
+    {
+      "mediaId": "part02",
+      "inFrame": "10",
+      "outFrame": "59"
+    },
+    {
+      "mediaId": "part03",
+      "inFrame": "2",
+      "outFrame": "59"
+    },
+    {
+      "mediaId": "part04",
+      "inFrame": "14",
+      "outFrame": "49"
+    }
+  ],
+  "transitions": [
+    {
+      "afterClipIndex": 0,
+      "type": "dissolve",
+      "duration": "6/25"
+    },
+    {
+      "afterClipIndex": 1,
+      "type": "wipe",
+      "duration": "10/25"
+    }
+  ],
+  "plan": {
+    "totalFrames": "168",
+    "blocks": [
+      {
+        "clipIndex": 0,
+        "startFrame": "0",
+        "endFrame": "39",
+        "frames": "40"
+      },
+      {
+        "clipIndex": 1,
+        "startFrame": "40",
+        "endFrame": "89",
+        "frames": "50"
+      },
+      {
+        "clipIndex": 2,
+        "startFrame": "90",
+        "endFrame": "147",
+        "frames": "58"
+      },
+      {
+        "clipIndex": 3,
+        "startFrame": "148",
+        "endFrame": "183",
+        "frames": "36"
+      }
+    ],
+    "transitions": [
+      {
+        "afterClipIndex": 0,
+        "type": "dissolve",
+        "frames": "6",
+        "offsetFrame": "34"
+      },
+      {
+        "afterClipIndex": 1,
+        "type": "wipe",
+        "frames": "10",
+        "offsetFrame": "80"
+      }
+    ]
+  }
+}

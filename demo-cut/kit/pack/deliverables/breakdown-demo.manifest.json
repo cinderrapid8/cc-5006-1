@@ -1,0 +1,85 @@
+{
+  "jobId": "pack-build",
+  "projectId": "breakdown-demo",
+  "projectRevision": 1,
+  "outputFps": "25/1",
+  "sampleRate": 48000,
+  "plannedTotalFrames": "168",
+  "measuredTotalFrames": "168",
+  "clips": [
+    {
+      "clipIndex": 0,
+      "intermediateFrames": "40",
+      "modelFrames": "40",
+      "source": {
+        "mediaId": "part01",
+        "mediaName": "part01",
+        "sourceFps": "25/1",
+        "inFrame": "4",
+        "outFrame": "43"
+      },
+      "audioSamples": 76051
+    },
+    {
+      "clipIndex": 1,
+      "intermediateFrames": "50",
+      "modelFrames": "50",
+      "source": {
+        "mediaId": "part02",
+        "mediaName": "part02",
+        "sourceFps": "25/1",
+        "inFrame": "10",
+        "outFrame": "59"
+      },
+      "audioSamples": 95636.5
+    },
+    {
+      "clipIndex": 2,
+      "intermediateFrames": "58",
+      "modelFrames": "58",
+      "source": {
+        "mediaId": "part03",
+        "mediaName": "part03",
+        "sourceFps": "25/1",
+        "inFrame": "2",
+        "outFrame": "59"
+      },
+      "audioSamples": 110805
+    },
+    {
+      "clipIndex": 3,
+      "intermediateFrames": "36",
+      "modelFrames": "36",
+      "source": {
+        "mediaId": "part04",
+        "mediaName": "part04",
+        "sourceFps": "25/1",
+        "inFrame": "14",
+        "outFrame": "49"
+      },
+      "audioSamples": 69050.5
+    }
+  ],
+  "cutsAndTransitions": [
+    {
+      "boundary": 0,
+      "kind": "dissolve",
+      "frames": "6",
+      "duration": "6/25s",
+      "offsetFrame": "34"
+    },
+    {
+      "boundary": 1,
+      "kind": "wipe",
+      "frames": "10",
+      "duration": "2/5s",
+      "offsetFrame": "74"
+    },
+    {
+      "boundary": 2,
+      "kind": "cut",
+      "atOutputFrame": "132"
+    }
+  ],
+  "note": "Freeze regions hold the named decoded source frame; transitions overlap real adjacent content; no edge frames are repeated to fill transitions."
+}

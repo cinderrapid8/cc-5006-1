@@ -1,0 +1,73 @@
+{
+  "packId": "breakdown-demo",
+  "packVersion": "1.0.0",
+  "createdAt": "deterministic",
+  "project": "project.json",
+  "sources": "sources.json",
+  "deliverables": {
+    "video": "deliverables/breakdown-demo.mp4",
+    "renderManifest": "deliverables/breakdown-demo.manifest.json"
+  },
+  "files": [
+    {
+      "path": "deliverables/breakdown-demo.manifest.json",
+      "sha256": "5723b440078e21fe038bffa141133330c38fd960be3754ea7aded5d61a9450de",
+      "bytes": 1908
+    },
+    {
+      "path": "deliverables/breakdown-demo.mp4",
+      "sha256": "deb4dd9b12f81ad0aa7a6afe470837bb7a37b3b9f0fbc12e0576db661ea22b35",
+      "bytes": 89166
+    },
+    {
+      "path": "media/part01.mp4",
+      "sha256": "ea45616f6644b1295c23c761f69c61b7ebf0ac15fbfcacfcd931bf653a384057",
+      "bytes": 24535
+    },
+    {
+      "path": "media/part02.mp4",
+      "sha256": "38e06881ecc889a4e8e3ce7bce697947ed5e4cbfcc698c99b56713c40672dda1",
+      "bytes": 24159
+    },
+    {
+      "path": "media/part03.mp4",
+      "sha256": "b1d28099cfaf213bd3569387ef23ba978919d92a86eb3c06e619f656f8b35c06",
+      "bytes": 25515
+    },
+    {
+      "path": "media/part04.mp4",
+      "sha256": "9e046ad47fd62b427a43b92c8a432334a24c116454a498c8d52dfa133c55d62e",
+      "bytes": 25724
+    },
+    {
+      "path": "project.json",
+      "sha256": "8b296f8e056b4e737be7d9d74eea7be66aa33a2488983ba1a6a86b97856bec62",
+      "bytes": 3615
+    },
+    {
+      "path": "sources.json",
+      "sha256": "9e82067000f8751f41721317778ded3d70d6bb061c71b97aaa5febe7cc21470b",
+      "bytes": 2673
+    },
+    {
+      "path": "subtitles/part01.ass",
+      "sha256": "9d7dce5436ba2edad88dcde6d34fffc0b982b4cb0f06cf6608b29a261b9aed14",
+      "bytes": 631
+    },
+    {
+      "path": "subtitles/part02.ass",
+      "sha256": "4d9d4e90fed3bbc1d460f8b76f113ad4fcf9b9d7d9df51aa05da2e72953f0f48",
+      "bytes": 629
+    },
+    {
+      "path": "subtitles/part03.ass",
+      "sha256": "908dc447679b3a639552ab39167252d80d3de8398e65c2edb982a89ee58bd9b8",
+      "bytes": 629
+    },
+    {
+      "path": "subtitles/part04.ass",
+      "sha256": "0ef9dd3777feeb2c991a0354795d32a6aa9e98ec6f42b36f1e6502fb53d829d9",
+      "bytes": 629
+    }
+  ]
+}

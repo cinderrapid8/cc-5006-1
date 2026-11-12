@@ -7,7 +7,11 @@
   "scripts": {
     "start": "node server/index.js",
     "test": "node test/run-tests.js",
-    "test:http": "node test/http-e2e.mjs"
+    "test:http": "node test/http-e2e.mjs",
+    "kit:build": "node kit/scripts/build-pack.js",
+    "kit:verify": "node kit/scripts/verify-rebuild.js",
+    "kit:edit": "node kit/scripts/edit-continue.js",
+    "kit:e2e": "node kit/test/e2e-kit.mjs"
   },
   "dependencies": {
     "ffmpeg-static": "*",

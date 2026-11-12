@@ -1,0 +1,178 @@
+{
+  "version": 1,
+  "id": "breakdown-demo",
+  "name": "Product breakdown demo",
+  "output": {
+    "width": 320,
+    "height": 180,
+    "fps": {
+      "num": "25",
+      "den": "1"
+    },
+    "sampleRate": 48000
+  },
+  "media": [
+    {
+      "id": "part01",
+      "partNo": 1,
+      "partName": "HOUSING",
+      "path": "media/part01.mp4",
+      "subtitle": "subtitles/part01.ass",
+      "width": 320,
+      "height": 180,
+      "fps": {
+        "num": "25",
+        "den": "1"
+      },
+      "frames": "60",
+      "sampleRate": 48000,
+      "audioChannels": 2,
+      "beepEvery": "8",
+      "beepFrames": "2",
+      "markers": [
+        "12",
+        "40"
+      ],
+      "bandColor": "0x2e7d32",
+      "kind": "breakdown"
+    },
+    {
+      "id": "part02",
+      "partNo": 2,
+      "partName": "ROTOR",
+      "path": "media/part02.mp4",
+      "subtitle": "subtitles/part02.ass",
+      "width": 320,
+      "height": 180,
+      "fps": {
+        "num": "25",
+        "den": "1"
+      },
+      "frames": "60",
+      "sampleRate": 48000,
+      "audioChannels": 2,
+      "beepEvery": "8",
+      "beepFrames": "2",
+      "markers": [
+        "9",
+        "34"
+      ],
+      "bandColor": "0x6a1b9a",
+      "kind": "breakdown"
+    },
+    {
+      "id": "part03",
+      "partNo": 3,
+      "partName": "SHAFT",
+      "path": "media/part03.mp4",
+      "subtitle": "subtitles/part03.ass",
+      "width": 320,
+      "height": 180,
+      "fps": {
+        "num": "25",
+        "den": "1"
+      },
+      "frames": "60",
+      "sampleRate": 48000,
+      "audioChannels": 2,
+      "beepEvery": "8",
+      "beepFrames": "2",
+      "markers": [
+        "10",
+        "44"
+      ],
+      "bandColor": "0x0277bd",
+      "kind": "breakdown"
+    },
+    {
+      "id": "part04",
+      "partNo": 4,
+      "partName": "COVER",
+      "path": "media/part04.mp4",
+      "subtitle": "subtitles/part04.ass",
+      "width": 320,
+      "height": 180,
+      "fps": {
+        "num": "25",
+        "den": "1"
+      },
+      "frames": "60",
+      "sampleRate": 48000,
+      "audioChannels": 2,
+      "beepEvery": "8",
+      "beepFrames": "2",
+      "markers": [
+        "13",
+        "45"
+      ],
+      "bandColor": "0xef6c00",
+      "kind": "breakdown"
+    }
+  ],
+  "clips": [
+    {
+      "id": "clip_1",
+      "mediaId": "part01",
+      "inFrame": "4",
+      "outFrame": "43",
+      "freeze": null
+    },
+    {
+      "id": "clip_2",
+      "mediaId": "part02",
+      "inFrame": "10",
+      "outFrame": "59",
+      "freeze": null
+    },
+    {
+      "id": "clip_3",
+      "mediaId": "part03",
+      "inFrame": "2",
+      "outFrame": "59",
+      "freeze": null
+    },
+    {
+      "id": "clip_4",
+      "mediaId": "part04",
+      "inFrame": "14",
+      "outFrame": "49",
+      "freeze": null
+    }
+  ],
+  "transitions": [
+    {
+      "afterClipIndex": 0,
+      "type": "dissolve",
+      "duration": {
+        "n": "6",
+        "d": "25"
+      }
+    },
+    {
+      "afterClipIndex": 1,
+      "type": "wipe",
+      "duration": {
+        "n": "10",
+        "d": "25"
+      }
+    }
+  ],
+  "createdAt": "1970-01-01T00:00:00.000Z",
+  "updatedAt": "1970-01-01T00:00:00.000Z",
+  "provenance": {
+    "generator": "kit/scripts/lib/breakdown-generator.js",
+    "recipe": "kit/scripts/lib/recipe.js",
+    "packVersion": "1.0.0",
+    "sampleRate": 48000,
+    "beep": {
+      "frequencyHz": 1000,
+      "everyFrames": "8",
+      "lengthFrames": "2"
+    },
+    "marker": {
+      "frequencyHz": 1400,
+      "lengthFrames": "1"
+    },
+    "note": "All media is procedurally generated with integer-frame parameters; see sources.json for per-file parameters and hashes."
+  }
+}
